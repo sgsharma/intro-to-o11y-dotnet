@@ -53,8 +53,8 @@ Get a Honeycomb API Key from your Team Settings in [Honeycomb](https://ui.honeyc
 Alternative: you can set these on the command line.
 
 ```sh
-export HONEYCOMB__APIKEY=<your api key here>
-export HONEYCOMB__SERVICENAME=fib-microsvc
+export HONEYCOMB_API_KEY=<your api key here>
+export HONEYCOMB_SERVICE_NAME=fib-microsvc
 
 dotnet run
 ```
@@ -145,7 +145,7 @@ Update the version in the .csproj file if necessary, and then 'dotnet run' will 
 Our documentation: [https://docs.honeycomb.io/getting-data-in/dotnet/opentelemetry-distro/]()
 
 If you see this error: `Unhandled exception. System.NullReferenceException: Object reference not set to an instance of an object.`
-... then you probably need to define the `HONEYCOMB__APIKEY` environment variable before running the app.
+... then you probably need to define the `HONEYCOMB_API_KEY` environment variable before running the app.
 
 If you see the warnings `Unable to bind to https://localhost:5001 on the IPv6 loopback interface: 'Cannot assign requested address'.` or `Unable to bind to http://localhost:5000 on the IPv6 loopback interface: 'Cannot assign requested address'.`
 ... then ignore it. We aren't using IPv6 here.
